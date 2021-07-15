@@ -42,6 +42,8 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gatsby-plugin-no-sourcemaps": "^3.9.0",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.3.2"
   },
   "keywords": [
