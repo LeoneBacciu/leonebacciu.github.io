@@ -35,21 +35,17 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolver: `gatsby-plugin-sharp`,
-    //   options: { placeholder: "white", backgroundColor: "white" },
-    // },
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Leone Bacciu`,
+        short_name: `Leone Bacciu`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#212121`,
+        theme_color: `#f55600`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/laptop_icon.png`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
