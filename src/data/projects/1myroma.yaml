@@ -1,0 +1,14 @@
+---
+title: MyRoma
+description: >
+  A really complete and easy to use guide to Rome.
+  With this app you can find all the most interesting attractions of the city,
+  which you can visit in complete freedom thanks to the audio and images.
+flags:
+  - dart_flutter
+  - django
+  - sqlite
+  - rest
+  - firebase
+preview: ./images/myroma.png
+url: https://www.myroma-app.com/

@@ -6,6 +6,18 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-yaml`,
+    {
+      resolve: "gatsby-plugin-svgr",
+      options: {
+        prettier: true,
+        svgo: true,
+        svgoConfig: {
+          plugins: [{ removeViewBox: true }, { cleanupIDs: true }],
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,8 +25,20 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/data/projects`,
+      },
+    },
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    // {
+    //   resolver: `gatsby-plugin-sharp`,
+    //   options: { placeholder: "white", backgroundColor: "white" },
+    // },
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

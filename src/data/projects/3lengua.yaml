@@ -1,0 +1,13 @@
+---
+title: Lengua Veneta
+description: >
+  This is a quotes app in the Venetian language.
+  WHen you shake your phone, it displays a quote that you can share on social media and save in your own list.
+
+flags:
+  - php
+  - wordpress
+  - mysql
+  - rest
+preview: ./images/lengua.png
+url: https://www.lenguaveneta.app/

@@ -4,4 +4,6 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
+import "./src/styles/global.css"
+import "react-full-page-snap/dist/index.css"
+import "react-3d-tag-cloud/dist/index.css"
