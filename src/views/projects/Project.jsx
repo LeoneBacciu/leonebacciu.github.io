@@ -161,7 +161,7 @@ const Project = ({ preview, title, flags, description, url, mobile }) => {
             ))}
           </CaptionFlagsContainer>
           <Description>{description}</Description>
-          <GoToButton url={url} />
+          {url !== "" && <GoToButton url={url} />}
         </CaptionText>
       </ProjectCaption>
     </ProjectContainer>
