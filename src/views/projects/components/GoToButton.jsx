@@ -29,6 +29,10 @@ const GoToText = styled.a`
 const GoToArrow = styled.span`
   padding-top: 3px;
   padding-left: 10px;
+
+  & > svg {
+    fill: ${props => props.theme.colors.primary};
+  }
 `
 
 const GoToButton = ({ url }) => (
@@ -36,12 +40,7 @@ const GoToButton = ({ url }) => (
     <GoToText rel="noreferrer" href={url} target="_blank">
       Go To Project
       <GoToArrow>
-        <ArrowEast
-          fill="white"
-          height="25px"
-          width="25px"
-          viewBox="0 0 24 24"
-        />
+        <ArrowEast height="25px" width="25px" viewBox="0 0 24 24" />
       </GoToArrow>
     </GoToText>
   </GoToContainer>

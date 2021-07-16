@@ -63,14 +63,18 @@ const IndexPage = () => {
         <title>Leone Bacciu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Leone Bacciu | My Personal website" />
-        <meta name="theme-color" content="#f55600" />
+        <meta name="theme-color" content={darkTheme.colors.accent} />
       </Helmet>
       {!isMobileOnly ? (
         <DesktopSite projects={allProjectsYaml} />
       ) : (
         <MobileSite projects={allProjectsYaml} />
       )}
-      <Fab icon={<SendIcon />} event={isMobile ? "click" : "hover"}>
+      <Fab
+        mainButtonStyles={{ backgroundColor: darkTheme.colors.accent }}
+        icon={<SendIcon fill={darkTheme.colors.primary} />}
+        event={isMobile ? "click" : "hover"}
+      >
         <Action
           text="Email"
           onClick={() => openLink("mailto:leonebacciu@gmail.com")}

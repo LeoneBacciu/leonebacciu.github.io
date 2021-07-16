@@ -67,7 +67,7 @@ const CaptionPermalink = styled.div`
 
   & > svg {
     transition: all 500ms;
-    fill: white;
+    fill: ${props => props.theme.colors.primary};
   }
 
   & > svg:hover {
@@ -146,7 +146,7 @@ const Project = ({ preview, title, flags, description, url, mobile }) => {
           <CaptionTitle>
             {title}
             <Tooltip
-              color="white"
+              color={themeContext.colors.primary}
               background={themeContext.colors.secondaryLabel}
               content={<span>Copy link</span>}
             >

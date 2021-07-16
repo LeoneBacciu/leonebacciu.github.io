@@ -22,7 +22,7 @@ const Content = styled.div`
   border-radius: ${props => props.size / 2}px;
   background-color: ${props => props.color};
   opacity: 0.5;
-  color: white;
+  color: ${props => props.theme.colors.primary};
   transition: all 500ms;
 
   display: flex;
@@ -39,7 +39,7 @@ const Content = styled.div`
     width: ${props => props.width}px;
     height: ${props => props.height}px;
     border-radius: 5px;
-    background-color: white;
+    background-color: ${props => props.theme.colors.primary};
     opacity: 1;
     padding: 10px;
     color: black;

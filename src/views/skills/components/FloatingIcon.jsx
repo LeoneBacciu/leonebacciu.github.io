@@ -31,9 +31,10 @@ const BaseIconContainer = styled.div`
   width: 50px;
   border-radius: 25px;
   overflow: hidden;
+  background-color: ${props =>
+    props.color !== undefined ? props.color : "#fff"};
   transition: all 750ms, color 250ms ease-in-out,
     background-color 250ms ease-in-out;
-  background-color: ${props => props.color};
   animation: ${props => wobbleAnimation(props.steps)} 6s ease-in-out infinite;
   animation-delay: ${props => props.animationDelay}ms;
 
@@ -93,7 +94,7 @@ const FloatingIcon = ({ title, icon, content, color }) => {
 
   return (
     <BaseIconContainer
-      color={color !== undefined ? color : "#fff"}
+      color={color}
       steps={steps}
       animationDelay={animationDelay}
     >
