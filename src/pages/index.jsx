@@ -1,6 +1,6 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
-import { isMobileOnly } from "react-device-detect"
+import { isMobile, isMobileOnly } from "react-device-detect"
 import { graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet"
 import { Action, Fab } from "react-tiny-fab"
@@ -70,7 +70,7 @@ const IndexPage = () => {
       ) : (
         <MobileSite projects={allProjectsYaml} />
       )}
-      <Fab icon={<SendIcon />}>
+      <Fab icon={<SendIcon />} event={isMobile ? "click" : "hover"}>
         <Action
           text="Email"
           onClick={() => openLink("mailto:leonebacciu@gmail.com")}
