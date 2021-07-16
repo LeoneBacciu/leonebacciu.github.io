@@ -11,6 +11,9 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: ["G-N3X2BTSQ11"],
+        pluginConfig: {
+          head: false,
+        },
       },
     },
     `gatsby-plugin-no-sourcemaps`,
