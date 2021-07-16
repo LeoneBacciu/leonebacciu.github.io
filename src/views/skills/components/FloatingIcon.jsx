@@ -1,8 +1,9 @@
 import React, { useMemo } from "react"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import PropTypes from "prop-types"
 import { randomIntInRange, shuffle } from "../../../utils"
 
+/*
 const wobbleAnimation = steps => keyframes`
   0% {
     margin-left: ${steps[0][0]}px;
@@ -25,6 +26,10 @@ const wobbleAnimation = steps => keyframes`
   }
 `
 
+animation: ${props => wobbleAnimation(props.steps)} 6s ease-in-out infinite;
+animation-delay: ${props => props.animationDelay}ms;
+ */
+
 const BaseIconContainer = styled.div`
   display: block;
   height: 50px;
@@ -35,8 +40,6 @@ const BaseIconContainer = styled.div`
     props.color !== undefined ? props.color : "#fff"};
   transition: all 750ms, color 250ms ease-in-out,
     background-color 250ms ease-in-out;
-  animation: ${props => wobbleAnimation(props.steps)} 6s ease-in-out infinite;
-  animation-delay: ${props => props.animationDelay}ms;
 
   &:hover {
     animation-play-state: paused;
