@@ -3,8 +3,12 @@ import { ThemeProvider } from "styled-components"
 import { isMobileOnly } from "react-device-detect"
 import { graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet"
+import { Action, Fab } from "react-tiny-fab"
 import MobileSite from "../browsers/MobileSite"
 import DesktopSite from "../browsers/DesktopSite"
+import { ReactComponent as SendIcon } from "../images/icons/send.svg"
+import { ReactComponent as EmailIcon } from "../images/icons/email.svg"
+import { ReactComponent as GitHubIcon } from "../images/icons/github.svg"
 
 const darkTheme = {
   colors: {
@@ -17,6 +21,9 @@ const darkTheme = {
     systemBackground: "#212121",
   },
 }
+
+const openLink = link => window.open(link, "_blank")
+
 const IndexPage = () => {
   const { allProjectsYaml } = useStaticQuery(graphql`
     query ProjectsData {
@@ -63,6 +70,20 @@ const IndexPage = () => {
       ) : (
         <MobileSite projects={allProjectsYaml} />
       )}
+      <Fab icon={<SendIcon />}>
+        <Action
+          text="Email"
+          onClick={() => openLink("mailto:leonebacciu@gmail.com")}
+        >
+          <EmailIcon />
+        </Action>
+        <Action
+          text="GitHub"
+          onClick={() => openLink("https://github.com/LeoneBacciu")}
+        >
+          <GitHubIcon />
+        </Action>
+      </Fab>
     </ThemeProvider>
   )
 }

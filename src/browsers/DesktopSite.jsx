@@ -20,11 +20,12 @@ const DesktopSite = ({ projects }) => {
       ref={ref}
       initialPage={p => setCurrentPage(p)}
       beforePageChange={(o, p) => setCurrentPage(p)}
-      scrollOptions={{ speed: 1000 }}
+      speedDown={1000}
+      speedUp={600}
     >
       <HomeHeader
         pageDownCallback={() => {
-          if (ref.current) ref.current.goToPage(1)
+          if (ref.current) ref.current.goToPage(1, 750)
         }}
       />
       <IconsCloud expanded={isSecondPage} size={300} />

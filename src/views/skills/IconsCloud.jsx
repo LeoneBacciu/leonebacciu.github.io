@@ -6,7 +6,6 @@ import FloatingIcon from "./components/FloatingIcon"
 import skillsData from "../../data/skills"
 import AccentUnderline from "../../components/AccentUnderline"
 import InfoButton from "./components/InfoButton"
-import devices from "../../core/devices"
 
 const PageContainer = styled.div`
   position: relative;
@@ -25,16 +24,11 @@ const CloudContainer = styled.div`
 
 const Title = styled.div`
   position: absolute;
-  top: 10px;
+  top: 2rem;
   right: 2.5rem;
   text-align: center;
   font-size: 40px;
   color: ${props => props.theme.colors.label};
-
-  @media (min-width: ${devices.tablet}) {
-    top: unset;
-    bottom: 20px;
-  }
 `
 
 const IconsCloud = ({ mobile, size, expanded }) => {
