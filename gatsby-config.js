@@ -6,7 +6,15 @@ module.exports = {
     siteUrl: `https://leonebacciu.github.io/`,
   },
   plugins: [
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        serialize: ({ path }) => ({
+          url: path,
+          lastmod: new Date().getTime(),
+        }),
+      },
+    },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
