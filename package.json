@@ -27,6 +27,7 @@
     "react-dom": "^17.0.2",
     "react-full-page-snap": "file:../react_full_page_snap/react-full-page-snap-v1.0.0.tgz",
     "react-helmet": "^6.1.0",
+    "react-tiny-fab": "^4.0.3",
     "react-tooltip-lite": "^1.12.0",
     "sharp": "^0.28.3",
     "styled-components": "^5.3.0"

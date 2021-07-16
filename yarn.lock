@@ -10507,7 +10507,7 @@ react-fast-compare@^3.1.1:
 
 "react-full-page-snap@file:../react_full_page_snap/react-full-page-snap-v1.0.0.tgz":
   version "1.0.0"
-  resolved "file:../react_full_page_snap/react-full-page-snap-v1.0.0.tgz#dc8428c6f19e6258bc6995e3d049a3cfda6395d0"
+  resolved "file:../react_full_page_snap/react-full-page-snap-v1.0.0.tgz#6ccb8382ff3789d33418096d7f0b0622e0052993"
   dependencies:
     animated-scroll-to "^2.2.0"
 
@@ -10540,6 +10540,11 @@ react-side-effect@^2.1.0:
   version "2.1.1"
   resolved "https://registry.npmjs.org/react-side-effect/-/react-side-effect-2.1.1.tgz"
   integrity sha512-2FoTQzRNTncBVtnzxFOk2mCpcfxQpenBMbk5kSVBg5UcPqV9fRbgY2zhb7GTWWOlpFmAxhClBDlIq8Rsubz1yQ==
+
+react-tiny-fab@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/react-tiny-fab/-/react-tiny-fab-4.0.3.tgz#99c71f58a2567e25997c49baa22178652eaa868e"
+  integrity sha512-H+tHPM1bO3iTN8ZDoyq1r0ui8jKslWpkTf3OePztcD8vLvr9QzZqmEoCfXVZEHZEv2GlU06coAe/wjMEEH1sBA==
 
 react-tooltip-lite@^1.12.0:
   version "1.12.0"
