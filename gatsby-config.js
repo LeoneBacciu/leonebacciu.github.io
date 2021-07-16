@@ -12,7 +12,7 @@ module.exports = {
       options: {
         trackingIds: ["G-N3X2BTSQ11"],
         pluginConfig: {
-          head: false,
+          head: true,
         },
       },
     },
