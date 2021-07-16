@@ -62,7 +62,7 @@ const IndexPage = () => {
       >
         <title>Leone Bacciu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Leone Bacciu | Personal website" />
+        <meta name="description" content="Leone Bacciu | My Personal website" />
         <meta name="theme-color" content="#f55600" />
       </Helmet>
       {!isMobileOnly ? (
