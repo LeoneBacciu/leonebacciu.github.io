@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: leonebacciu.github.io
+Token: fd32076fd5a49fc9693b71922c282e0c62da39941961f102c3c76ff7d060b063
