@@ -24,6 +24,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-well-known`,
     `gatsby-plugin-no-sourcemaps`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
