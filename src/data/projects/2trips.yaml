@@ -1,0 +1,18 @@
+---
+title: Trips
+description: >
+  Trips is a geolocation centered app
+  that will help you discover the beauties
+  in the areas surrounding the city of Spoleto.
+flags:
+  - dart_flutter
+  - geolocation
+  - django
+  - docker & docker-compose
+  - reactjs_typescript
+  - nginx
+  - postgresql
+  - wordpress
+  - rest
+preview: ./images/trips.png
+url: https://tripspoleto.it/

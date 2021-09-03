@@ -1,0 +1,15 @@
+---
+title: CombiYou
+description: >
+  The first App that heals with food.
+  Tailoring the diet to your needs and tastes,
+  it gradually allows you to get in shape and stay fit.
+flags:
+  - dart_flutter
+  - stripe
+  - inapp_payments
+  - rest
+  - firebase
+  - notifications
+preview: ./images/combiyou.png
+url: https://www.combiyou.it/

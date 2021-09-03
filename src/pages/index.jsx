@@ -9,6 +9,8 @@ import DesktopSite from "../browsers/DesktopSite"
 import { ReactComponent as SendIcon } from "../images/icons/send.svg"
 import { ReactComponent as EmailIcon } from "../images/icons/email.svg"
 import { ReactComponent as GitHubIcon } from "../images/icons/github.svg"
+import { ReactComponent as DocumentIcon } from "../images/icons/document.svg"
+import downloadFile from "../data/Leone Bacciu CV.pdf"
 
 const darkTheme = {
   colors: {
@@ -75,6 +77,9 @@ const IndexPage = () => {
         icon={<SendIcon fill={darkTheme.colors.primary} />}
         event={isMobile ? "click" : "hover"}
       >
+        <Action text="CV" onClick={() => openLink(downloadFile)}>
+          <DocumentIcon />
+        </Action>
         <Action
           text="Email"
           onClick={() => openLink("mailto:leonebacciu@gmail.com")}

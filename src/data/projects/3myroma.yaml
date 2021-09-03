@@ -7,8 +7,10 @@ description: >
 flags:
   - dart_flutter
   - django
+  - nginx
   - sqlite
   - rest
+  - reactjs
   - firebase
 preview: ./images/myroma.png
-url: ''
+url: https://www.myroma-app.com/
