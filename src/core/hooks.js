@@ -1,6 +1,7 @@
-import { useLayoutEffect, useState } from "react"
+import { useEffect, useLayoutEffect, useState } from "react"
+import { isMobileOnly } from "react-device-detect"
 
-const useWindowSize = () => {
+export const useWindowSize = () => {
   const [size, setSize] = useState([0, 0])
   useLayoutEffect(() => {
     function updateSize() {
@@ -14,4 +15,24 @@ const useWindowSize = () => {
   return size
 }
 
-export default useWindowSize
+export const useClient = () => {
+  const [isClient, setIsClient] = useState(false)
+  useEffect(() => {
+    setIsClient(
+      !!(
+        typeof window !== "undefined" &&
+        window.document &&
+        window.document.createElement
+      )
+    )
+  }, [])
+  return isClient
+}
+
+export const useMobile = () => {
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    setIsMobile(isMobileOnly)
+  }, [])
+  return isMobile
+}

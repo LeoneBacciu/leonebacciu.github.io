@@ -1,12 +1,12 @@
-import React, { useContext } from "react"
-import styled, { ThemeContext } from "styled-components"
+import React from "react"
+import styled from "styled-components"
 import PropTypes from "prop-types"
 import { GatsbyImage } from "gatsby-plugin-image"
-import Tooltip from "react-tooltip-lite"
+// import Tooltip from "react-tooltip-lite"
 import GoToButton from "./components/GoToButton"
 import devices from "../../core/devices"
 
-import { ReactComponent as PermaLinkIcon } from "../../images/icons/link.svg"
+// import { ReactComponent as PermaLinkIcon } from "../../images/icons/link.svg"
 
 const ProjectContainer = styled.div`
   display: flex;
@@ -59,22 +59,22 @@ const CaptionTitle = styled.div`
   }
 `
 
-const CaptionPermalink = styled.div`
-  height: 25px;
-  width: 25px;
-  padding: 1px 0;
-  cursor: pointer;
-
-  & > svg {
-    transition: all 500ms;
-    fill: ${props => props.theme.colors.primary};
-  }
-
-  & > svg:hover {
-    fill: ${props => props.theme.colors.accent};
-    transform: scale(1.1);
-  }
-`
+// const CaptionPermalink = styled.div`
+//   height: 25px;
+//   width: 25px;
+//   padding: 1px 0;
+//   cursor: pointer;
+//
+//   & > svg {
+//     transition: all 500ms;
+//     fill: ${props => props.theme.colors.primary};
+//   }
+//
+//   & > svg:hover {
+//     fill: ${props => props.theme.colors.accent};
+//     transform: scale(1.1);
+//   }
+// `
 
 const CaptionFlagsContainer = styled.div`
   display: flex;
@@ -103,29 +103,29 @@ const Description = styled.div`
 const Project = ({ preview, title, flags, description, url, mobile }) => {
   const link = title.replace(" ", "").toLowerCase()
 
-  const themeContext = useContext(ThemeContext)
+  // const themeContext = useContext(ThemeContext)
 
-  const fallbackCopyTextToClipboard = text => {
-    const textArea = document.createElement("textarea")
-    textArea.value = text
-    textArea.style.top = "0"
-    textArea.style.left = "0"
-    textArea.style.position = "fixed"
-    document.body.appendChild(textArea)
-    textArea.focus()
-    textArea.select()
-    document.execCommand("copy")
-    document.body.removeChild(textArea)
-  }
+  // const fallbackCopyTextToClipboard = text => {
+  //   const textArea = document.createElement("textarea")
+  //   textArea.value = text
+  //   textArea.style.top = "0"
+  //   textArea.style.left = "0"
+  //   textArea.style.position = "fixed"
+  //   document.body.appendChild(textArea)
+  //   textArea.focus()
+  //   textArea.select()
+  //   document.execCommand("copy")
+  //   document.body.removeChild(textArea)
+  // }
 
-  const onLinkClick = () => {
-    const text = `${window.location.protocol}//${window.location.host}/#${link}`
-    if (!navigator.clipboard) {
-      fallbackCopyTextToClipboard(text)
-    } else {
-      navigator.clipboard.writeText(text).then()
-    }
-  }
+  // const onLinkClick = () => {
+  //   const text = `${window.location.protocol}//${window.location.host}/#${link}`
+  //   if (!navigator.clipboard) {
+  //     fallbackCopyTextToClipboard(text)
+  //   } else {
+  //     navigator.clipboard.writeText(text).then()
+  //   }
+  // }
 
   return (
     <ProjectContainer id={link}>
@@ -145,15 +145,15 @@ const Project = ({ preview, title, flags, description, url, mobile }) => {
         <CaptionText>
           <CaptionTitle>
             {title}
-            <Tooltip
-              color={themeContext.colors.primary}
-              background={themeContext.colors.secondaryLabel}
-              content={<span>Copy link</span>}
-            >
-              <CaptionPermalink onClick={onLinkClick}>
-                <PermaLinkIcon />
-              </CaptionPermalink>
-            </Tooltip>
+            {/* <Tooltip */}
+            {/*  color={themeContext.colors.primary} */}
+            {/*  background={themeContext.colors.secondaryLabel} */}
+            {/*  content={<span>Copy link</span>} */}
+            {/* > */}
+            {/*  <CaptionPermalink onClick={onLinkClick}> */}
+            {/*    <PermaLinkIcon /> */}
+            {/*  </CaptionPermalink> */}
+            {/* </Tooltip> */}
           </CaptionTitle>
           <CaptionFlagsContainer>
             {flags.map(p => (

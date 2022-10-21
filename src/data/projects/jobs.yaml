@@ -1,0 +1,17 @@
+---
+title: Jobs Zuccante
+description: >
+  A platform that allows students to 
+  post their resumes and local businesses
+  to post jobs
+flags:
+  - django
+  - docker & docker-compose
+  - reactjs_typescript
+  - nginx
+  - postgresql
+  - rest
+  - unit_test
+preview: ./images/jobs.png
+url: https://jobs.zuccante.it/
+order: 1

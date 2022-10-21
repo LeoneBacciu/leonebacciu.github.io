@@ -1,0 +1,14 @@
+---
+title: Lengua Veneta
+description: >
+  This is a quotes app in the Venetian language.
+  It has a feature that recognizes object from a picture and tells you their name in Venetian language
+flags:
+  - dart_flutter
+  - firebase
+  - ai_ml
+  - tensorflow
+  - google_ml_kit
+preview: ./images/lengua.png
+url: https://www.lenguaveneta.app/
+order: 4

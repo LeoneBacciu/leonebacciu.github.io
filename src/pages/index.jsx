@@ -1,16 +1,8 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
-import { isMobile, isMobileOnly } from "react-device-detect"
 import { graphql, useStaticQuery } from "gatsby"
-import { Helmet } from "react-helmet"
-import { Action, Fab } from "react-tiny-fab"
-import MobileSite from "../browsers/MobileSite"
-import DesktopSite from "../browsers/DesktopSite"
-import { ReactComponent as SendIcon } from "../images/icons/send.svg"
-import { ReactComponent as EmailIcon } from "../images/icons/email.svg"
-import { ReactComponent as GitHubIcon } from "../images/icons/github.svg"
-import { ReactComponent as DocumentIcon } from "../images/icons/document.svg"
-import downloadFile from "../data/Leone Bacciu CV.pdf"
+import Site from "../browsers/Site"
+import { useClient } from "../core/hooks"
 
 const darkTheme = {
   colors: {
@@ -24,12 +16,34 @@ const darkTheme = {
   },
 }
 
-const openLink = link => window.open(link, "_blank")
+const LazyFab = React.lazy(() => import("../components/LazyFab"))
+
+export const Head = () => (
+  <>
+    <title>Leone Bacciu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Leone Bacciu | My Personal website" />
+    <meta name="theme-color" content={darkTheme.colors.accent} />
+    <link rel="canonical" href="https://leonebacciu.github.io" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossOrigin="true"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap"
+      rel="stylesheet"
+    />
+  </>
+)
 
 const IndexPage = () => {
+  const isClient = useClient()
+
   const { allProjectsYaml } = useStaticQuery(graphql`
     query ProjectsData {
-      allProjectsYaml {
+      allProjectsYaml(sort: { fields: order }) {
         edges {
           node {
             title
@@ -55,44 +69,15 @@ const IndexPage = () => {
       }
     }
   `)
+
   return (
     <ThemeProvider theme={darkTheme}>
-      <Helmet
-        htmlAttributes={{
-          lang: "en",
-        }}
-      >
-        <title>Leone Bacciu</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Leone Bacciu | My Personal website" />
-        <meta name="theme-color" content={darkTheme.colors.accent} />
-      </Helmet>
-      {!isMobileOnly ? (
-        <DesktopSite projects={allProjectsYaml} />
-      ) : (
-        <MobileSite projects={allProjectsYaml} />
+      <Site projects={allProjectsYaml} />
+      {isClient && (
+        <React.Suspense>
+          <LazyFab theme={darkTheme} />
+        </React.Suspense>
       )}
-      <Fab
-        mainButtonStyles={{ backgroundColor: darkTheme.colors.accent }}
-        icon={<SendIcon fill={darkTheme.colors.primary} />}
-        event={isMobile ? "click" : "hover"}
-      >
-        <Action text="CV" onClick={() => openLink(downloadFile)}>
-          <DocumentIcon />
-        </Action>
-        <Action
-          text="Email"
-          onClick={() => openLink("mailto:leonebacciu@gmail.com")}
-        >
-          <EmailIcon />
-        </Action>
-        <Action
-          text="GitHub"
-          onClick={() => openLink("https://github.com/LeoneBacciu")}
-        >
-          <GitHubIcon />
-        </Action>
-      </Fab>
     </ThemeProvider>
   )
 }

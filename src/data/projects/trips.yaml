@@ -3,7 +3,7 @@ title: Trips
 description: >
   Trips is a geolocation centered app
   that will help you discover the beauties
-  in the areas surrounding the city of Spoleto.
+  in the areas surrounding the city of Spoleto
 flags:
   - dart_flutter
   - geolocation
@@ -16,3 +16,4 @@ flags:
   - rest
 preview: ./images/trips.png
 url: https://tripspoleto.it/
+order: 2

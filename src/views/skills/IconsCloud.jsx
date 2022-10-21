@@ -1,11 +1,12 @@
 import React, { useMemo } from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
-import TagCloud from "react-3d-tag-cloud"
+import TagSphere from "react-tag-sphere"
 import FloatingIcon from "./components/FloatingIcon"
 import skillsData from "../../data/skills"
 import AccentUnderline from "../../components/AccentUnderline"
 import InfoButton from "./components/InfoButton"
+import { useMobile } from "../../core/hooks"
 
 const PageContainer = styled.div`
   position: relative;
@@ -31,17 +32,22 @@ const Title = styled.div`
   color: ${props => props.theme.colors.label};
 `
 
-const IconsCloud = ({ mobile, size, expanded }) => {
-  const diameter = useMemo(() => size * 2 + 50, [size])
+const IconsCloud = ({ expanded }) => {
+  const isMobile = useMobile()
+
+  const [diameter, radius] = useMemo(() => {
+    const rad = isMobile ? 125 : 300
+    return [rad * 2 + 50, rad]
+  }, [isMobile])
 
   return (
-    <PageContainer mobile={mobile}>
+    <PageContainer mobile={isMobile}>
       <CloudContainer scale={expanded ? "1" : "0"} diameter={diameter}>
-        <TagCloud speed={0.6} maxSpeed={0.7} radius={size} margin={25}>
+        <TagSphere speed={0.6} maxSpeed={0.7} radius={radius} margin={25}>
           {skillsData.icons.map(d => (
             <FloatingIcon key={d.title} {...d} />
           ))}
-        </TagCloud>
+        </TagSphere>
       </CloudContainer>
 
       <InfoButton>
@@ -61,12 +67,6 @@ const IconsCloud = ({ mobile, size, expanded }) => {
 
 IconsCloud.propTypes = {
   expanded: PropTypes.bool.isRequired,
-  mobile: PropTypes.bool,
-  size: PropTypes.number.isRequired,
-}
-
-IconsCloud.defaultProps = {
-  mobile: false,
 }
 
 export default React.memo(IconsCloud)

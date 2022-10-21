@@ -16,7 +16,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2018,
+    ecmaVersion: "latest",
     sourceType: "module",
   },
   plugins: ["react", "prettier"],
@@ -25,5 +25,6 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "react/require-default-props": "off",
     "no-param-reassign": [2, { props: false }],
+    "react/function-component-definition": "off",
   },
 }

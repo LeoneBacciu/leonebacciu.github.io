@@ -5,6 +5,6 @@
  */
 
 import "./src/styles/global.css"
-import "react-full-page-snap/dist/index.css"
-import "react-3d-tag-cloud/dist/index.css"
+import "react-scroll-snap/dist/index.css"
+import "react-tag-sphere/dist/index.css"
 import "react-tiny-fab/dist/styles.css"

@@ -3,7 +3,7 @@ title: Museo Zuccante
 description: >
   An application that guides tourists through my school's computers museum.
   Complete with an admin panel to add and edit content.
-  It works within the school's open WiFi.
+  It works within the school open WiFi
 flags:
   - django
   - sqlite
@@ -12,3 +12,4 @@ flags:
   - rest
 preview: ./images/museo.png
 url: https://github.com/Saerlig-Software-Development/museozuccante_backend
+order: 5

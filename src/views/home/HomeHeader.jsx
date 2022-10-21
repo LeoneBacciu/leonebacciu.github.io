@@ -3,9 +3,9 @@ import styled, { keyframes } from "styled-components"
 import PropTypes from "prop-types"
 import { ReactComponent as WaveEmoji } from "../../images/emojis/wave_hand_u1f44b.svg"
 import presentationData from "../../data/presentation"
-import AccentUnderline from "../../components/AccentUnderline"
 import ArrowDown from "./components/ArrowDown"
 import devices from "../../core/devices"
+import AnimatedAccentUnderline from "../../components/AnimatedAccentUnderline"
 
 const WaveAnimation = keyframes`
   0% {
@@ -107,7 +107,7 @@ const HomeHeader = ({ pageDownCallback }) => (
         </WaveHandEmoji>
       </HeaderGreeting>
       <HeaderName>
-        I&#39;m <AccentUnderline>Leone Bacciu</AccentUnderline>,
+        I&#39;m <AnimatedAccentUnderline>Leone Bacciu</AnimatedAccentUnderline>,
       </HeaderName>
       <HeaderSubtitle>{presentationData.subtitle}</HeaderSubtitle>
       <HeaderList>

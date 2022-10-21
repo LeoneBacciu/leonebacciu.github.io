@@ -5,6 +5,9 @@ module.exports = {
     author: `@LeoneBacciu`,
     siteUrl: `https://leonebacciu.github.io/`,
   },
+  flags: {
+    DEV_SSR: true,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-sitemap`,
@@ -26,19 +29,8 @@ module.exports = {
     },
     `gatsby-plugin-well-known`,
     `gatsby-plugin-no-sourcemaps`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-yaml`,
-    {
-      resolve: "gatsby-plugin-svgr",
-      options: {
-        prettier: true,
-        svgo: true,
-        svgoConfig: {
-          plugins: [{ removeViewBox: true }, { cleanupIDs: true }],
-        },
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -53,6 +45,26 @@ module.exports = {
         path: `${__dirname}/src/data/projects`,
       },
     },
+    {
+      resolve: "gatsby-plugin-svgr",
+      options: {
+        prettier: true,
+        svgo: true,
+        svgoConfig: {
+          plugins: [
+            {
+              name: "preset-default",
+              params: {
+                overrides: {
+                  removeViewBox: false,
+                },
+              },
+            },
+          ],
+        },
+      },
+    },
+
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

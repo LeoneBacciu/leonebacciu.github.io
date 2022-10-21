@@ -15,6 +15,7 @@ import { ReactComponent as GatsbyIcon } from "../images/icons/gatsbyjs.svg"
 import { ReactComponent as PostgreSqlIcon } from "../images/icons/postgresql.svg"
 import { ReactComponent as GitIcon } from "../images/icons/git.svg"
 import { ReactComponent as CircuitIcon } from "../images/icons/circuit.svg"
+import { ReactComponent as CppIcon } from "../images/icons/cpp.svg"
 
 const skillsData = {
   icons: [
@@ -47,7 +48,7 @@ const skillsData = {
       title: "Tensorflow",
       icon: <TensorflowIcon fill="white" />,
       content:
-        "Using tensorflow and tflite I can integrate AI into apps and real-world products",
+        "Using TensorFlow and tflite I can integrate AI into apps and real-world products",
     },
     {
       title: "React",
@@ -59,39 +60,39 @@ const skillsData = {
       title: "Java",
       icon: <JavaIcon />,
       content:
-        "I have +4 years of experience with Java, on desktop (JavaFX) and mobile (Android development) platforms",
+        "I have 5+ years of experience with Java, on desktop (JavaFX) and mobile (Android development) platforms",
     },
     {
       title: "Firebase",
       icon: <FirebaseIcon />,
       content:
-        "I use Firebase for its NoSQL fast database, serverless apps and notifications",
+        "I use Firebase for its NoSQL fast database, serverless functions and notifications",
       color: "#039BE5",
     },
     {
       title: "WordPress",
       icon: <WordPressIcon />,
       content:
-        "I use WordPress to build simpler websites, also integrating it with native apps",
+        "I use WordPress to build simpler websites, also by integrating it with native apps",
       color: "#00749C",
     },
     {
       title: "Unreal Engine 4",
       icon: <UE4Icon />,
-      content: "I built a few projects with UE4, using the C++ API",
+      content: "I built a few simulators with UE4, using the C++ API",
       color: "#000",
     },
     {
       title: "Python",
       icon: <PythonIcon />,
       content:
-        "Analytics, web scraping, scripting, bots: all thing Python allows me to do",
+        "Web servers, analytics, ML, web scraping, scripting, bots: I can do it with Python",
     },
     {
       title: "OpenCV",
       icon: <OpenCvIcon />,
       content:
-        "I have a little experience doing image processing with OpenCV in Python",
+        "I have used OpenCV to do image processing and text recognition in Python",
     },
     {
       title: "Gatsby",
@@ -104,7 +105,7 @@ const skillsData = {
       title: "PostgreSQL",
       icon: <PostgreSqlIcon />,
       content:
-        "I use PostgreSQL whenever possible, especially for storing geo data",
+        "I use PostgreSQL whenever possible, especially for storing complex and geo data",
     },
     {
       title: "GIT",
@@ -116,8 +117,15 @@ const skillsData = {
       title: "Embedded",
       icon: <CircuitIcon fill="#f1923b" />,
       content:
-        "Me and my team qualified 4th at the Italian Robotics Olympic Games",
+        "Me and my team qualified 3rd at the Italian Robotics Olympic Games",
       color: "#008C4A",
+    },
+    {
+      title: "C++",
+      icon: <CppIcon fill="white" />,
+      content:
+        "I love C++, I use it for robotics, embedded programming and competitive programming contests",
+      color: "#01426A",
     },
   ],
 }

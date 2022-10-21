@@ -1,15 +1,17 @@
 import React, { useEffect, useRef, useState } from "react"
 import FullPageSnap from "react-scroll-snap"
 import { isMobileOnly } from "react-device-detect"
-import animateScrollTo from "animated-scroll-to"
 import HomeHeader from "../views/home/HomeHeader"
-import IconsCloud from "../views/skills/IconsCloud"
-import Project from "../views/projects/Project"
 import { allProjectsType } from "../core/queries"
+import { useClient } from "../core/hooks"
+import IconsCloud from "../views/skills/IconsCloud"
 
-const DesktopSite = ({ projects }) => {
+const Project = React.lazy(() => import("../views/projects/Project"))
+
+const Site = ({ projects }) => {
   const [currentPage, setCurrentPage] = useState(0)
   const [isSecondPage, setIsSecondPage] = useState(false)
+  const isClient = useClient()
 
   const ref = useRef(null)
 
@@ -24,22 +26,24 @@ const DesktopSite = ({ projects }) => {
       beforePageChange={(o, p) => setCurrentPage(p)}
       speedDown={1000}
       speedUp={600}
-      enabled={!isMobileOnly}
+      enabled={isClient && !isMobileOnly}
     >
       <HomeHeader
         pageDownCallback={() => {
-          if (!isMobileOnly && ref.current) ref.current.goToPage(1, 750)
-          else animateScrollTo(window.innerHeight, { speed: 2000 }).then()
+          if (ref.current) ref.current.goToPage(1, 750)
         }}
       />
-      <IconsCloud expanded={isSecondPage} size={isMobileOnly ? 125 : 300} />
-      {projects.edges.map(p => (
-        <Project key={p.node.title} mobile={isMobileOnly} {...p.node} />
-      ))}
+      <IconsCloud expanded={isSecondPage} />
+      {isClient &&
+        projects.edges.map(p => (
+          <React.Suspense key={p.node.title}>
+            <Project mobile={isMobileOnly} {...p.node} />
+          </React.Suspense>
+        ))}
     </FullPageSnap>
   )
 }
 
-DesktopSite.propTypes = allProjectsType
+Site.propTypes = allProjectsType
 
-export default DesktopSite
+export default Site
