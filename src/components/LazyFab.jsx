@@ -8,7 +8,7 @@ import { ReactComponent as SendIcon } from "../images/icons/send.svg"
 import { ReactComponent as EmailIcon } from "../images/icons/email.svg"
 import { ReactComponent as GitHubIcon } from "../images/icons/github.svg"
 import { ReactComponent as DocumentIcon } from "../images/icons/document.svg"
-import downloadFile from "../data/Leone Bacciu CV.pdf"
+import downloadFile from "../data/LeoneBacciuCV.pdf"
 
 const openLink = link => window.open(link, "_blank")
 
