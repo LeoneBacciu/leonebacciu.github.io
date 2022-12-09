@@ -2592,7 +2592,7 @@ ajv@^8.0.1:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-animated-scroll-to@^2.2.0, animated-scroll-to@^2.3.0:
+animated-scroll-to@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/animated-scroll-to/-/animated-scroll-to-2.3.0.tgz#01d7a82db7ace7017eae11c5ebbafd3b0270bced"
   integrity sha512-PT/5MSKCWQaK2kuOl2HT2KJMuJEvUS4/TgMhWy82c2EmF74/CIkvPBPKOvd8nMYP6Higo7xCn49/iSW9BccMoQ==
@@ -3998,9 +3998,9 @@ decamelize@^1.2.0:
   integrity sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha512-hjf+xovcEn31w/EUYdTXQh/8smFL/dzYjohQGEIgjyNavaJfBY2p5F527Bo1VPATxv0VYTUC2bOcXvqFwk78Og==
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 decompress-response@^3.3.0:
   version "3.3.0"
@@ -8557,7 +8557,6 @@ react-refresh@^0.14.0:
 
 "react-scroll-snap@link:../react-scroll-snap":
   version "0.0.0"
-  uid ""
 
 react-server-dom-webpack@0.0.0-experimental-c8b778b7f-20220825:
   version "0.0.0-experimental-c8b778b7f-20220825"
@@ -8575,7 +8574,6 @@ react-side-effect@^2.1.0:
 
 "react-tag-sphere@link:../react-tag-sphere":
   version "0.0.0"
-  uid ""
 
 react-tiny-fab@^4.0.3:
   version "4.0.4"
